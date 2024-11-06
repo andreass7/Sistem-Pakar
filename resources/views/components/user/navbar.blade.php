@@ -18,10 +18,10 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">Home</a>
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">About</a>
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">Petunjuk</a>
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">Pengembang</a>
+            <a href="{{ route('User.Dashbord') }}" class="text-sm/6 font-semibold text-gray-900">Home</a>
+            <a href="{{ route('User.About') }}" class="text-sm/6 font-semibold text-gray-900">About</a>
+            <a href="{{ route('User.Petunjuk') }}" class="text-sm/6 font-semibold text-gray-900">Petunjuk</a>
+            <a href="{{ route('User.Pengembang') }}" class="text-sm/6 font-semibold text-gray-900">Pengembang</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span
@@ -51,13 +51,13 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="#"
+                        <a href="{{ route('User.Dashbord') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-                        <a href="#"
+                        <a href="{{ route('User.About') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About</a>
-                        <a href="#"
+                        <a href="{{ route('User.Petunjuk') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Petunjuk</a>
-                        <a href="#"
+                        <a href="{{ route('User.Pengembang') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Pengembang</a>
                     </div>
                     <div class="py-6">
