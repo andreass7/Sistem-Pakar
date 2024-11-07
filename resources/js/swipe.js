@@ -1,14 +1,18 @@
 const slides = document.querySelectorAll("#carouselGallery .flex-none");
 let currentIndex = 0;
 
-document.getElementById("prevSlide").addEventListener("click", () => {
+function updateSlide(newIndex) {
     slides[currentIndex].classList.add("hidden"); // Sembunyikan slide saat ini
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Pindah ke slide sebelumnya
-    slides[currentIndex].classList.remove("hidden"); // Tampilkan slide yang baru
+    slides[newIndex].classList.remove("hidden"); // Tampilkan slide yang baru
+    currentIndex = newIndex; // Perbarui indeks saat ini
+}
+
+document.getElementById("prevSlide").addEventListener("click", () => {
+    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide(newIndex);
 });
 
 document.getElementById("nextSlide").addEventListener("click", () => {
-    slides[currentIndex].classList.add("hidden"); // Sembunyikan slide saat ini
-    currentIndex = (currentIndex + 1) % slides.length; // Pindah ke slide berikutnya
-    slides[currentIndex].classList.remove("hidden"); // Tampilkan slide yang baru
+    const newIndex = (currentIndex + 1) % slides.length;
+    updateSlide(newIndex);
 });
