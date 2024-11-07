@@ -101,128 +101,110 @@
                     <h2 class="text-4xl font-bold text-gray-800">Beberapa Contoh Tanaman Bonsai</h2>
                 </div>
 
-                <!-- Carousel -->
-                <div id="carouselGallery" class="relative overflow-hidden">
-                    <div class="flex transition-transform duration-300" style="transform: translateX(0%);">
-                        <!-- Slide 1 -->
-                        <div class="flex-none w-full md:flex gap-6">
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/anggur.jpg') }}" alt="Bonsai Anggur"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Anggur</span>
-                                    </div>
-                                </a>
+                <!-- Carousel in a single row with swipe/scroll functionality -->
+                <div id="carouselGallery" class="flex gap-6 overflow-x-auto scroll-smooth scrollbar-none">
+                    <!-- Bonsai Anggur -->
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/anggur.jpg') }}" alt="Bonsai Anggur"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Anggur</span>
                             </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/bougenville.jpg') }}" alt="Bonsai Bougenville"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Bougenville</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/cemara1.jpg') }}" alt="Bonsai Cemara"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Cemara</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="flex-none w-full md:flex gap-6 hidden">
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/fucsia.jpg') }}" alt="Bonsai Fucshia"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Fucshia</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/maple.jpg') }}" alt="Bonsai Maple"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Maple</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/pinus.jpg') }}" alt="Bonsai Pinus"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Pinus</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="flex-none w-full md:flex gap-6 hidden">
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/sakura.jpg') }}" alt="Bonsai Sakura"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Sakura</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/santigi.jpg') }}" alt="Bonsai Santigi"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Santigi</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="md:w-1/3">
-                                <a href="#" class="block group relative rounded-lg overflow-hidden">
-                                    <img src="{{ asset('img/bonsai/anting.jpg') }}" alt="Bonsai Anting Putri"
-                                        class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                        <span class="text-white font-semibold">Bonsai Anting Putri</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
-                    <!-- Controls -->
-                    <button id="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button id="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                    <!-- Bonsai Bougenville -->
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/bougenville.jpg') }}" alt="Bonsai Bougenville"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Bougenville</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Bonsai Cemara -->
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/cemara1.jpg') }}" alt="Bonsai Cemara"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Cemara</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/fucsia.jpg') }}" alt="Bonsai Fucshia"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Fucshia</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/maple.jpg') }}" alt="Bonsai Maple"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Maple</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/pinus.jpg') }}" alt="Bonsai Pinus"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Pinus</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/sakura.jpg') }}" alt="Bonsai Sakura"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Sakura</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/santigi.jpg') }}" alt="Bonsai Santigi"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Santigi</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="min-w-[250px]">
+                        <a href="#" class="block group relative rounded-lg overflow-hidden">
+                            <img src="{{ asset('img/bonsai/anting.jpg') }}" alt="Bonsai Anting Putri"
+                                class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-white font-semibold">Bonsai Anting Putri</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Bonsai lainnya... -->
+                    <!-- Tambahkan item lain di sini mengikuti struktur yang sama -->
+
                 </div>
             </section>
+
         </div>
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
             aria-hidden="true">
