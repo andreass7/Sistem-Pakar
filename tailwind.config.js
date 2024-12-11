@@ -13,6 +13,13 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                pacifico:['Pacifico', 'cursive']
+            },
+            animation: {
+                'spin-slow': 'spin 3s linear infinite',
+            },
+            backgroundImage: {
+                'conic-gradient': 'conic-gradient(var(--tw-gradient-stops))',
             },
         },
     },

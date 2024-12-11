@@ -18,16 +18,19 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="{{ route('User.Dashbord') }}" class="text-sm/6 font-semibold text-gray-900">Home</a>
-            <a href="{{ route('User.Petunjuk') }}" class="text-sm/6 font-semibold text-gray-900">Petunjuk</a>
-            <a href="{{ route('User.Pengembang') }}" class="text-sm/6 font-semibold text-gray-900">Pengembang</a>
-            <a href="{{ route('User.GejalaSolusi') }}" class="text-sm/6 font-semibold text-gray-900">Gejala & Solusi</a>
+            <x-user.nav-link href="{{ route('User.Dashbord') }}" :active="request()->is('/')">Home</x-user.nav-link>
+            <x-user.nav-link href="{{ route('User.Petunjuk') }}" :active="request()->is('petunjuk-user')">Petunjuk</x-user.nav-link>
+            <x-user.nav-link href="{{ route('User.Pengembang') }}" :active="request()->is('pengembang-user')">Pengembang</x-user.nav-link>
+            <x-user.nav-link href="{{ route('User.CaraPerawatan') }}" :active="request()->is('cara-perawatan')">Cara
+                Perawatan</x-user.nav-link>
+            <x-user.nav-link href="{{ route('User.GejalaSolusi') }}" :active="request()->is('gejala-user')">Gejala &
+                Solusi</x-user.nav-link>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="text-sm/6 font-semibold text-gray-900">Log Out <span
-                        aria-hidden="true">&rarr;</span></button>
+                <button type="submit" class="text-sm/6 font-semibold text-gray-900 hover:mr-2 transition-all">Log Out
+                    <span aria-hidden="true">&rarr;</span></button>
             </form>
         </div>
     </nav>
@@ -60,6 +63,9 @@
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Petunjuk</a>
                         <a href="{{ route('User.Pengembang') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Pengembang</a>
+                        <a href="{{ route('User.CaraPerawatan') }}"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Cara
+                            Perawatan</a>
                         <a href="{{ route('User.GejalaSolusi') }}"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Gejala
                             & Solusi</a>

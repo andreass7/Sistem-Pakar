@@ -6,9 +6,8 @@
                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
             </div>
         </div>
-        <div class="mx-auto py-2 sm:py-48 lg:py-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Diagnosis Penyakit Tanaman Bonsai</h2>
-
+        <div class="mx-auto py-10 sm:py-10 lg:py-16">
+            <h2 class="text-3xl font-bold text-center mb-14">Diagnosis Penyakit Tanaman Bonsai</h2>
             <form action="#" method="POST" class="bg-white shadow-md rounded-lg px-8 py-8 mb-4">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-lg font-bold mb-4">Pilih Gejala:</label>
@@ -16,35 +15,31 @@
                         <!-- Gejala statis untuk demo -->
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala1" class="mr-2">
-                            <label for="gejala1" class="text-gray-700">Daun Menguning</label>
+                            <label for="gejala1" class="text-gray-700">Kekurangan Nutrisi</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala2" class="mr-2">
-                            <label for="gejala2" class="text-gray-700">Daun Layu</label>
+                            <label for="gejala2" class="text-gray-700">Penyiraman Berlebihan</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala3" class="mr-2">
-                            <label for="gejala3" class="text-gray-700">Bintik Hitam pada Daun</label>
+                            <label for="gejala3" class="text-gray-700">Infeksi Jamur</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala4" class="mr-2">
-                            <label for="gejala4" class="text-gray-700">Batang Kering</label>
+                            <label for="gejala4" class="text-gray-700">Kekeringan</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala5" class="mr-2">
-                            <label for="gejala5" class="text-gray-700">Akar Membusuk</label>
+                            <label for="gejala5" class="text-gray-700">Busuk Akar</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala6" class="mr-2">
-                            <label for="gejala6" class="text-gray-700">Daun Berlubang</label>
+                            <label for="gejala6" class="text-gray-700">Infeksi Hama</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" id="gejala7" class="mr-2">
-                            <label for="gejala7" class="text-gray-700">Tunas Baru Tidak Tumbuh</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="gejala8" class="mr-2">
-                            <label for="gejala8" class="text-gray-700">Serangga Kecil pada Daun</label>
+                            <label for="gejala7" class="text-gray-700">Virus Daun Keriting</label>
                         </div>
                     </div>
                 </div>
