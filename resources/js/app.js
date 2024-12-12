@@ -1,5 +1,5 @@
-import './bootstrap';
 import './swipe';
+import './bootstrap';
 
 import Alpine from 'alpinejs';
 

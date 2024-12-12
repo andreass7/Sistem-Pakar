@@ -97,7 +97,7 @@
                         <div
                             class="sm:absolute sm:top-[85%] sm:right-[15%] sm:transform sm:translate-x-1/2 sm:-translate-y-1/2">
                             <div
-                                class="sm:w-80 max-w-screen-sm border p-3 bg-rose-200 rounded-md hover:scale-110 transition-all duration-500 ease-in-out hover:bg-gradient-to-br from-rose-400 to-rose-200">
+                                class="sm:w-80 max-w-screen-sm border p-3 bg-sky-200 rounded-md hover:scale-110 transition-all duration-500 ease-in-out hover:bg-gradient-to-br from-sky-400 to-sky-200">
                                 <strong class=" text-2xl">Pemupukan</strong>
                                 <p class="text-sm">&rarr; Gunakan pupuk khusus bonsai atau pupuk tanaman biasa dengan
                                     dosis yang sesuai.</p>
@@ -108,7 +108,7 @@
                         <div
                             class="sm:absolute sm:top-full sm:left-[20%] sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2">
                             <div
-                                class="sm:w-96 max-w-screen-sm border p-3 bg-sky-200 rounded-md hover:scale-110 transition-all duration-500 ease-in-out hover:bg-gradient-to-bl from-sky-400 to-sky-200">
+                                class="sm:w-96 max-w-screen-sm border p-3 bg-rose-200 rounded-md hover:scale-110 transition-all duration-500 ease-in-out hover:bg-gradient-to-bl from-rose-400 to-rose-200">
                                 <strong class=" text-2xl">Pemindahan Pot</strong>
                                 <p class="text-sm">&rarr; Pindahkan bonsai ke pot baru setiap 1-3 tahun, tergantung pada
                                     jenis tanaman dan pertumbuhannya.</p>
@@ -119,7 +119,12 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#f84b59] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
         </div>
     </div>
 </x-user.layout>

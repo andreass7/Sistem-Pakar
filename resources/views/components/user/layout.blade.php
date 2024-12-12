@@ -21,6 +21,8 @@
         {{-- @yield('content') --}}
         {{ $slot }}
     </main>
+    <x-user.footer></x-user.footer>
+    {{-- <script src="{{ '/js/app.js' }}"></script> --}}
 
 </body>
 
