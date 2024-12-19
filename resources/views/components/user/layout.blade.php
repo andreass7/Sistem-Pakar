@@ -23,6 +23,7 @@
     </main>
     <x-user.footer></x-user.footer>
     {{-- <script src="{{ '/js/app.js' }}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 </body>
 

@@ -27,7 +27,7 @@
 
     <x-admin.sidebar></x-admin.sidebar>
     <main>
-        <div class="ml-64 p-6">
+        <div class="sm:ml-64 sm:p-6 p-6">
             {{ $slot }}
         </div>
     </main>

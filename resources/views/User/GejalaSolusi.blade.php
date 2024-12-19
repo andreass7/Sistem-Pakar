@@ -9,183 +9,38 @@
         <div class="mx-auto py-10 sm:py-10 lg:py-16">
             <h2 class="text-3xl font-bold text-center mb-14">Diagnosis Penyakit <span
                     class="font-extralight text-center font-pacifico text-green-500"> Tanaman Bonsai</span></h2>
-            <form action="#" method="POST" class="bg-white shadow-md rounded-lg px-8 py-8 mb-4">
+            <form action="{{ route('User.GejalaSolusi') }}" method="POST"
+                class="bg-white shadow-md rounded-lg px-8 py-8 mb-4">
+                @csrf
                 <div class="mb-4">
-                    <P class="block text-gray-700 text-xl font-bold mb-4">Silahkan Pilih Gejala Yang Dialami Pada
-                        Tanaman Bonsai Anda</P>
+                    <P class="block text-gray-700 text-xl font-bold mb-10 text-center">Silahkan Pilih Gejala Yang
+                        Dialami
+                        Pada
+                        Tanaman Bonsai Anda <span class="block w-40 mx-auto mt-2 border-b-4 border-green-300"></span>
+                    </P>
                     <div class="gap-y-2 grid">
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100" onclick="toggleDropdown('dropdown1')">
-                                <label id="gejalaLabel1" for="gejala1" class="text-gray-700">Apakah Daun Bonsai
-                                    Menguning?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
+                        @foreach ($gejala as $item)
+                            <div class="parentDiv rounded-md cursor-pointer transition-colors duration-300">
+                                <div
+                                    class="sm:flex sm:justify-between sm:items-center grid gap-y-2 p-3 hover:bg-green-200">
+                                    <label class="text-gray-700 font-medium">{{ $item->nama }}</label>
+                                    <select name="gejala[{{ $item->id }}]" data-parent="parentDiv"
+                                        class="selectGejala bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-60 p-2.5">
+                                        <option value="" selected>Silahkan Pilih</option>
+                                        <option value="0">Tidak</option>
+                                        <option value="0.4">Sedikit Ada</option>
+                                        <option value="0.6">Cukup Ada</option>
+                                        <option value="0.8">Ada</option>
+                                        <option value="1">Sangat Ada</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div id="dropdown1" class="border-t text-center hidden bg-gray-100">
-                                <div class="border-b p-2 hover:bg-gray-300"
-                                    onclick="setActiveOption(this, 'gejalaLabel1')">Tidak</div>
-                                <div class="border-b p-2 hover:bg-gray-300">Sedikit Yakin</div>
-                                <div class="border-b p-2 hover:bg-gray-300">Cukup Yakin</div>
-                                <div class="border-b p-2 hover:bg-gray-300">Yakin</div>
-                                <div class="p-2 hover:bg-gray-300">Sangat Yakin</div>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100" onclick="toggleDropdown('dropdown2')">
-                                <label id="gejalaLabel2" for="gejala1" class="text-gray-700">Apakah Daun Bonsai
-                                    Layu?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div id="dropdown2" class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 "
-                                    onclick="setActiveOption(this, 'gejalaLabel2')">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Ada Bintik Hitam Pada Daun
-                                    Bonsai?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Batang Bonsai Kering?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Akar Bonsai Membusuk?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100"
-                                onclick="toggleDropdown('dropdown3')">
-                                <label for="gejala1" class="text-gray-700">Apakah Daun Bonsai Berlubang?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div id="dropdown3" class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Tunas Baru Tidak Tumbuh Pada
-                                    Tanaman
-                                    Bonsai?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Ada Serangga Kecil Pada Tanaman
-                                    Bonsai?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="border rounded-md cursor-pointer">
-                            <div class="flex items-center p-3 hover:bg-green-100">
-                                <label for="gejala1" class="text-gray-700">Apakah Akar Berbau Busuk Pada Tanaman
-                                    Bonsai?</label>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5 text-gray-500 ml-auto">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="border-t text-center hidden group-hover:block">
-                                <option value="gejala1" class="border-b p-2 ">Tidak</option>
-                                <option value="gejala2" class="border-b p-2 ">Sedikit Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Cukup Yakin</option>
-                                <option value="gejala2" class="border-b p-2 ">Yakin</option>
-                                <option value="gejala2" class="p-2">Sangat Yakin</option>
-                            </div>
-                        </div>
-                        <div class="p-3">
-
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <button type="button" onclick="showDiagnosis()"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Diagnosis
+
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Proses
                 </button>
             </form>
         </div>

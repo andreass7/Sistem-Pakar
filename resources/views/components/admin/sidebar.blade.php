@@ -26,7 +26,7 @@
                 </x-admin.nav-link>
             </li>
             <li>
-                <x-admin.nav-link href="{{ route('Admin.user') }}">
+                <x-admin.nav-link href="{{ route('Admin.DataGejala') }}" :active="request()->is('admin-Data-Gejala')">
                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
                         <path
@@ -36,7 +36,7 @@
                 </x-admin.nav-link>
             </li>
             <li>
-                <x-admin.nav-link href="#">
+                <x-admin.nav-link href="{{ route('Admin.RiwayatUser') }}" :active="request()->is('admin-riwayat')">
                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -47,17 +47,20 @@
                 </x-admin.nav-link>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-200 group mt-10">
-                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75
-                        group-hover:text-gray-900"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                    </svg>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="flex items-center p-2 text-gray-900 rounded-lg  group mt-10">
+                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75
+                            group-hover:text-gray-900"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                        </svg>
 
-                    <span class="flex-1 ms-2 whitespace-nowrap">Log Out</span>
-                </a>
+                        <span class="flex-1 ms-2 whitespace-nowrap">Log Out</span>
+                    </button>
+                </form>
             </li>
 
         </ul>

@@ -1,58 +1,30 @@
-// function toggleDropdown(id) {
-//     const dropdown = document.getElementById(id);
-//     dropdown.classList.toggle('hidden');
-    
-// }
+// const selectElement = document.getElementById('selectGejala');
+// const parentDiv = document.getElementById('parentDiv');
+
+// selectElement.addEventListener('change', function () {
+//     if (this.value !== "") {
+//         parentDiv.classList.add('bg-green-200');
+//     } else {
+//         parentDiv.classList.remove('bg-green-200');
+//     }
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
+    // Ambil semua elemen select dengan class 'selectGejala'
+    const selectElements = document.querySelectorAll('.selectGejala');
 
-    // Fungsi untuk mengatur latar belakang label aktif
-    function setActiveOption(option, labelId) {
-        // Ambil elemen label berdasarkan ID
-        const label = document.getElementById(labelId);
+    selectElements.forEach(function (select) {
+        select.addEventListener('change', function () {
+            // Cari parentDiv yang terkait menggunakan closest()
+            const parentDiv = this.closest('.parentDiv');
 
-        // Tambahkan kelas aktif ke label (background hijau)
-        label.classList.add('bg-green-100', 'text-green-700', 'p-2', 'rounded-md');
-
-        // Tetap mempertahankan teks dalam label
-        // Pastikan teksnya tidak hilang dan tetap ada
-        if (!label.classList.contains('text-green-700')) {
-            label.textContent = label.textContent.trim(); // Pastikan teksnya tidak hilang
-        }
-
-        // Sembunyikan dropdown setelah pilihan dipilih
-        const dropdown = option.closest('.border'); // Ambil elemen dropdown
-        const dropdownContent = dropdown.querySelector('.text-center'); // Dropdown yang berisi opsi
-        dropdownContent.classList.add('hidden'); // Menyembunyikan dropdown
-    }
-
-    // Tambahkan listener ke elemen dropdown
-    document.querySelectorAll('[onclick]').forEach(item => {
-        item.addEventListener('click', function () {
-            const id = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-            toggleDropdown(id);
-        });
-    });
-
-    // Tambahkan listener untuk opsi di dalam dropdown
-    document.querySelectorAll('#dropdown1 > div').forEach(option => {
-        option.addEventListener('click', function () {
-            // Set ID label terkait (sesuaikan ID sesuai dengan HTML)
-            const labelId = 'gejalaLabel1';
-            setActiveOption(this, labelId);
-        });
-    });
-
-    // Tambahkan listener untuk dropdown kedua
-    document.querySelectorAll('#dropdown2 > div').forEach(option => {
-        option.addEventListener('click', function () {
-            const labelId = 'gejalaLabel2';
-            setActiveOption(this, labelId);
+            if (this.value !== "") {
+                // Tambahkan kelas jika nilai dipilih
+                parentDiv.classList.add('bg-green-200');
+            } else {
+                // Hapus kelas jika kembali ke pilihan kosong
+                parentDiv.classList.remove('bg-green-200');
+            }
         });
     });
 });
-
-

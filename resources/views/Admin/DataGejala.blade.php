@@ -1,16 +1,14 @@
 <x-admin.layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-
-
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Nama
+                        Kode
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Email
+                        Nama
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Aksi
@@ -18,15 +16,15 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $index => $user)
+                @foreach ($dataGejala as $item)
                     <tr
                         class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $user->name }}
+                            {{ $item->kode }}
                         </th>
                         <td class="px-6 py-4">
-                            {{ $user->email }}
+                            {{ $item->nama }}
                         </td>
                         <td class="px-6 py-4">
                             <a href="#"
@@ -51,5 +49,4 @@
             </tbody>
         </table>
     </div>
-
 </x-admin.layout>
