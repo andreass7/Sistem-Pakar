@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\DataGejalaController;
+use App\Http\Controllers\Admin\DetailController;
 use App\Http\Controllers\Admin\Home;
+use App\Http\Controllers\Admin\PerhitunganController;
 use App\Http\Controllers\Admin\RiwayatUserController;
 use App\Http\Controllers\Admin\userController;
 use App\Http\Controllers\ProfileController;
@@ -28,6 +30,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admin-user', [userController::class, 'index'])->name('Admin.user');
     Route::get('/admin-Data-Gejala', [DataGejalaController::class, 'index'])->name('Admin.DataGejala');
     Route::get('/admin-riwayat', [RiwayatUserController::class, 'index'])->name('Admin.RiwayatUser');
+    Route::get('/admin-riwayat/{id}', [RiwayatUserController::class, 'show'])->name('Admin.Detail');
+    Route::get('/admin-perhitungan', [PerhitunganController::class, 'index'])->name('Admin.Perhitungan');
+    Route::post('/admin-perhitungan', [PerhitunganController::class, 'hitung'])->name('Admin.Perhitungan');
 });
 
 

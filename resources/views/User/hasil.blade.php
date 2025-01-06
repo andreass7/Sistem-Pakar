@@ -10,9 +10,8 @@
 
             <div class="rounded-md grid gap-y-2">
                 <h2 class="text-center text-4xl font-bold my-5">Rekomendasi Hasil</h2>
-                {{-- Tampilkan Gejala yang Diinput --}}
                 @if (!empty($daftarGejala))
-                    <div class="bg-sky-200 shadow-md rounded-lg p-6">
+                    <div class="bg-sky-100 shadow-md rounded-lg p-6">
                         <h3 class="text-2xl font-semibold text-gray-800">Gejala yang Anda Pilih:</h3>
                         <ul class="list-disc list-inside mt-3">
                             @foreach ($daftarGejala as $gejala)
@@ -53,9 +52,6 @@
                 @endif
                 @if ($hasilTertinggi)
                     <div class="bg-white shadow-md rounded-lg p-6">
-                        {{-- <h2 class="text-xl font-bold text-green-500 mb-2">Penyakit &rarr;
-                            {{ $hasilTertinggi['penyakit'] }}
-                        </h2> --}}
                         <p class="text-xl">Berdasarkan Dari Gejala Yang Anda Pilih atau Alami Juga Berdasarkan
                             Role/Basis
                             Aturan
@@ -67,14 +63,9 @@
                             </strong></p>
 
                     </div>
-                    {{-- <div class="bg-white shadow-md rounded-lg p-6">
-                        <p class="text-xl font-semibold text-green-500 ">Penyakit Yang Di Alami &rarr;
-
-                        </p>
-                    </div> --}}
-                    <div class="bg-sky-100 shadow-md rounded-lg p-6">
+                    <div class="bg-sky-200 shadow-md rounded-lg p-6">
                         <p class="text-2xl font-semibold text-green-400 ">Solusi &rarr; <span
-                                class="text-gray-600 text-2xl">
+                                class="text-black text-2xl">
                                 {{ $hasilTertinggi['solusi'] }}
                             </span></p>
                     </div>

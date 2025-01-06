@@ -7,8 +7,9 @@
             </div>
         </div>
         <div class="mx-auto py-10 sm:py-10 lg:py-16">
-            <h2 class="text-3xl font-bold text-center mb-14">Diagnosis Penyakit <span
-                    class="font-extralight text-center font-pacifico text-green-500"> Tanaman Bonsai</span></h2>
+            <h2 data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-bold text-center mb-14">Diagnosis Penyakit
+                <span class="font-extralight text-center font-pacifico text-green-500"> Tanaman Bonsai</span>
+            </h2>
             <form action="{{ route('User.GejalaSolusi') }}" method="POST"
                 class="bg-white shadow-md rounded-lg px-8 py-8 mb-4">
                 @csrf
@@ -18,9 +19,21 @@
                         Pada
                         Tanaman Bonsai Anda <span class="block w-40 mx-auto mt-2 border-b-4 border-green-300"></span>
                     </P>
+                    @if ($errors->any())
+                        <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 5000)"
+                            class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative transition-opacity duration-500">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <div class="gap-y-2 grid">
                         @foreach ($gejala as $item)
-                            <div class="parentDiv rounded-md cursor-pointer transition-colors duration-300">
+                            <div data-aos="fade-up" data-aos-duration="1000"
+                                class="parentDiv rounded-md cursor-pointer transition-colors duration-300">
                                 <div
                                     class="sm:flex sm:justify-between sm:items-center grid gap-y-2 p-3 hover:bg-green-200">
                                     <label class="text-gray-700 font-medium">{{ $item->nama }}</label>

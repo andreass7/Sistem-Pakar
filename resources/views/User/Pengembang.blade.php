@@ -10,13 +10,13 @@
         <div class="mx-auto py-10 sm:py-10 lg:py-16">
             <div class="font-[sans-serif] my-4">
                 <div class="max-w-5xl max-lg:max-w-2xl mx-auto">
-                    <div class="max-w-2xl mx-auto text-center">
+                    <div data-aos="zoom-in" data-aos-duration="1000" class="max-w-2xl mx-auto text-center">
                         <h2 class="text-gray-800 text-4xl font-extrabold">Pengembang</h2>
                         <p class="text-gray-600 text-base mt-4 leading-relaxed">"Website ini dibuat dan dikembangkan
                             untuk
                             memenuhi tugas proyek mata kuliah Sistem Pakar dengan dosen pengampu Ibu Yumarlin."</p>
                     </div>
-                    <div class="mt-10 flex justify-center">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="mt-10 flex justify-center">
                         <div
                             class="max-w-xs w-full bg-white shadow-lg rounded-lg p-2 text-center  transform transition duration-500 hover:scale-105 hover:shadow-lg">
                             <div class="mb-4">
@@ -29,7 +29,8 @@
                         </div>
                     </div>
 
-                    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center mt-10">
+                    <div data-aos="fade-up" data-aos-duration="1000"
+                        class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center mt-10">
                         <!-- Card 1 -->
                         <div
                             class="border rounded-md overflow-hidden max-md:max-w-[300px] transform transition duration-500 hover:scale-105 hover:shadow-lg">

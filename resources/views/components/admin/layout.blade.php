@@ -11,7 +11,7 @@
     {{-- <link href="{{ resources('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 
-<body>
+<body class="bg-gray-100">
 
     <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
         type="button"

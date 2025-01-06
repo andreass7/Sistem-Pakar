@@ -120,6 +120,18 @@
                 </div>
             </div>
         </div>
+        <div class="sm:mt-24 sm:px-10 sm:text-center -mt-4 text-justify pb-4 flex justify-center">
+            <div class="max-w-screen-sm p-5 text-xl rounded-md bg-amber-200 shadow-lg font-semibold ">
+                <span class="text-green-500"><a href="https://www.youtube.com/@BelajarBonsai" target="_blank"
+                        rel="noopener noreferrer">Belajar
+                        Bonsai</a></span>
+                adalah channel youtube yang
+                memberikan sebuah edukasi
+                mengenai cara
+                perawatan dari
+                tanaman bonsai.
+            </div>
+        </div>
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]"
             aria-hidden="true">
             <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#f84b59] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"

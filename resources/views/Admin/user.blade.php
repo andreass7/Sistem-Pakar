@@ -1,6 +1,7 @@
 <x-admin.layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
+    <h1 class="max-w-full bg-white shadow-md text-green-500 p-3 rounded-lg text-2xl font-bold mb-2">Data User</h1>
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

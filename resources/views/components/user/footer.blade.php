@@ -19,27 +19,31 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
-                    <ul class="text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
-                    <ul class="text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                        </li>
-                    </ul>
+                <div class="grid sm:grid-cols-2 sm:gap-x-8">
+                    {{-- <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2> --}}
+                    <div>
+                        <ul class="text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Petunjuk</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Pengembang</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Cara Perawatan</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Gejala &amp; Solusi </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

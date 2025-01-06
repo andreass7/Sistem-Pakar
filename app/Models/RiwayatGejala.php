@@ -25,4 +25,9 @@ class RiwayatGejala extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function detailPerhitungan()
+    {
+        return $this->hasMany(DetailPerhitungan::class, 'riwayat_id');
+    }
 }

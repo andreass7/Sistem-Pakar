@@ -9,11 +9,13 @@
         <div class="mx-auto py-2 sm:py-10 lg:py-16">
             <div class="mx-auto px-6 pb-10">
                 <div class="flex flex-col md:flex-row items-center md:space-x-10">
-                    <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <div data-aos="zoom-in" data-aos-duration="2000"
+                        class="md:w-1/2 order-2 md:order-1 flex justify-center">
                         <img src="{{ asset('img/over.png') }}" alt="Overlay Image"
                             class="w-full h-auto max-w-md transform hover:scale-105 transition duration-500 ease-out hover:brightness-110">
                     </div>
-                    <div class="md:w-1/2 order-1 md:order-2 mt-10 md:mt-0">
+                    <div data-aos="fade-left" data-aos-duration="2000"
+                        class="md:w-1/2 order-1 md:order-2 mt-10 md:mt-0">
                         <div class="hero-content flex flex-col items-start space-y-6">
                             <h3
                                 class="text-4xl font-medium text-gradient bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text uppercase tracking-wider">
@@ -43,13 +45,13 @@
                         <!-- Bagian Teks -->
                         <div class="lg:w-1/2 space-y-8 ">
                             <!-- Judul -->
-                            <h1
+                            <h1 data-aos="fade-right" data-aos-duration="500"
                                 class="text-4xl sm:text-5xl lg:text-5xl text-center font-bold text-gray-800 mb-4 leading-tight">
                                 Seni Merawat <span class="text-green-500">Bonsai</span> dengan Cinta
                             </h1>
 
                             <!-- Tentang Bonsai -->
-                            <div class="flex gap-4 items-center">
+                            <div class="flex gap-4 items-center" data-aos="fade-right" data-aos-duration="500">
                                 <img class="w-1/3 h-auto bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-500"
                                     src="{{ asset('img/bonsai/bonbon5.jpg') }}" alt="Bonsai Image 5">
                                 <div class="w-2/3">
@@ -65,26 +67,30 @@
                             <div class="border-t border-gray-300 my-4"></div>
 
                             <!-- Tips Perawatan -->
-                            <h2 class="text-2xl font-semibold text-gray-700 mb-2">Tips Dasar Merawat Bonsai:</h2>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Pilih pot yang sesuai</li>
-                                <li>Rutin menyiram dan menjaga kelembapan</li>
-                                <li>Pangkas dan bentuk secara berkala</li>
-                                <li>Gunakan pupuk yang tepat</li>
-                                <li>Berikan pencahayaan yang cukup</li>
-                                <li>Lindungi dari hama dan penyakit</li>
-                            </ul>
+                            <div data-aos="fade-right" data-aos-duration="1000">
+                                <h2 class="text-2xl font-semibold text-gray-700 mb-2">Tips Dasar Merawat Bonsai:</h2>
+                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                    <li>Pilih pot yang sesuai</li>
+                                    <li>Rutin menyiram dan menjaga kelembapan</li>
+                                    <li>Pangkas dan bentuk secara berkala</li>
+                                    <li>Gunakan pupuk yang tepat</li>
+                                    <li>Berikan pencahayaan yang cukup</li>
+                                    <li>Lindungi dari hama dan penyakit</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Bagian Gambar -->
                         <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                            <div class="col-span-1 flex flex-col items-center gap-4">
+                            <div class="col-span-1 flex flex-col items-center gap-4" data-aos="fade-left"
+                                data-aos-duration="500">
                                 <img class="w-full h-auto bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500"
                                     src="{{ asset('img/bonsai/bonbon1.jpg') }}" alt="Bonsai Image 1">
                                 <img class="w-3/4 h-auto bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500"
                                     src="{{ asset('img/bonsai/bonbon2.jpg') }}" alt="Bonsai Image 2">
                             </div>
-                            <div class="col-span-1 flex flex-col items-center gap-4">
+                            <div class="col-span-1 flex flex-col items-center gap-4" data-aos="fade-left"
+                                data-aos-duration="3000">
                                 <img class="w-3/4 h-auto bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500"
                                     src="{{ asset('img/bonsai/bonbon3.jpg') }}" alt="Bonsai Image 3">
                                 <img class="w-full h-auto bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500"
@@ -96,7 +102,7 @@
             </section>
 
             <section id="gallery" class="container mx-auto py-16 ">
-                <div class="text-center mx-auto mb-12 max-w-lg">
+                <div class="text-center mx-auto mb-12 max-w-lg" data-aos="zoom-in" data-aos-duration="1000">
                     <p class="text-xl font-medium italic text-blue-500">Galeri Bonsai</p>
                     <h2 class="text-4xl font-bold text-gray-800">Beberapa Contoh Tanaman Bonsai</h2>
                 </div>

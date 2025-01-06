@@ -8,8 +8,10 @@
         </div>
         <div class="mx-auto py-10 sm:py-10 lg:py-16">
             <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-14">Petunjuk dan Cara Penggunaan</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group">
+                <h2 data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-bold mb-14">Petunjuk dan Cara
+                    Penggunaan</h2>
+                <div data-aos="fade-up" data-aos-duration="3000"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group">
                     <div
                         class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 lg:opacity-75 lg:hover:opacity-100 transform transition duration-300 ease-in-out group-hover:blur-sm hover:!blur-none">
                         <strong class="text-xl font-semibold text-green-600">Halaman Home</strong>
